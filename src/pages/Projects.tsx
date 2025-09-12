@@ -34,9 +34,11 @@ const Projects = () => {
     if (filter === 'all') {
       setFilteredProjects(projects);
     } else {
-      setFilteredProjects(projects.filter(project => 
-        project.tags.some(tag => tag.toLowerCase().includes(filter))
-      ));
+      setFilteredProjects(
+        projects.filter(project =>
+          project.tags.some(tag => tag.toLowerCase().includes(filter))
+        )
+      );
     }
   };
 
@@ -65,9 +67,12 @@ const Projects = () => {
             <motion.h1 variants={fadeUp} className="text-h1 font-bold mb-6">
               Projects
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-muted max-w-2xl mx-auto">
-              A collection of projects showcasing my expertise in frontend development, 
-              design systems, and user experience.
+            <motion.p
+              variants={fadeUp}
+              className="text-xl text-muted max-w-2xl mx-auto"
+            >
+              A collection of projects showcasing my expertise in frontend
+              development, design systems, and user experience.
             </motion.p>
           </motion.div>
 
@@ -78,7 +83,7 @@ const Projects = () => {
             animate="animate"
             className="flex flex-wrap justify-center gap-4 mb-16"
           >
-            {filters.map((filter) => (
+            {filters.map(filter => (
               <button
                 key={filter}
                 onClick={() => handleFilterChange(filter)}
@@ -102,14 +107,19 @@ const Projects = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredProjects.length > 0 ? (
-              filteredProjects.map((project) => (
+              filteredProjects.map(project => (
                 <motion.div key={project.id} variants={fadeUp}>
                   <ProjectCard project={project} />
                 </motion.div>
               ))
             ) : (
-              <motion.div variants={fadeUp} className="col-span-full text-center py-12">
-                <p className="text-muted">No projects found for the selected filter.</p>
+              <motion.div
+                variants={fadeUp}
+                className="col-span-full text-center py-12"
+              >
+                <p className="text-muted">
+                  No projects found for the selected filter.
+                </p>
               </motion.div>
             )}
           </motion.div>

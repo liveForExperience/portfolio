@@ -8,7 +8,8 @@ const VideoGallery = ({ videos }: VideoGalleryProps) => {
 
   const getEmbedUrl = (video: { source: string; url: string }) => {
     if (video.source === 'youtube') {
-      const videoId = video.url.split('v=')[1]?.split('&')[0] || video.url.split('/').pop();
+      const videoId =
+        video.url.split('v=')[1]?.split('&')[0] || video.url.split('/').pop();
       return `https://www.youtube.com/embed/${videoId}`;
     }
     if (video.source === 'vimeo') {
@@ -45,7 +46,7 @@ const VideoGallery = ({ videos }: VideoGalleryProps) => {
             animate={{ scale: 1 }}
             exit={{ scale: 0.8 }}
             className="bg-surface rounded-lg overflow-hidden max-w-4xl w-full"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
             <div className="aspect-video">
               <iframe
@@ -75,7 +76,7 @@ const VideoGallery = ({ videos }: VideoGalleryProps) => {
         viewport={{ once: true }}
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {videos.map((video) => (
+        {videos.map(video => (
           <motion.div
             key={video.id}
             variants={fadeUp}
@@ -94,7 +95,7 @@ const VideoGallery = ({ videos }: VideoGalleryProps) => {
                   <span className="text-muted">Video Thumbnail</span>
                 </div>
               )}
-              
+
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
@@ -107,18 +108,18 @@ const VideoGallery = ({ videos }: VideoGalleryProps) => {
                   </svg>
                 </div>
               </div>
-              
+
               {/* Duration Badge */}
               <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded">
                 {formatDuration(video.duration)}
               </div>
             </div>
-            
+
             <div className="p-4">
               <h3 className="font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
                 {video.title}
               </h3>
-              
+
               <div className="flex items-center justify-between text-sm text-muted">
                 <span className="capitalize">{video.source}</span>
                 <span>{formatDuration(video.duration)}</span>

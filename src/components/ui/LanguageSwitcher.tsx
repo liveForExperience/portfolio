@@ -8,10 +8,11 @@ const LanguageSwitcher = () => {
 
   const languages = [
     { code: 'zh', name: '中文', flag: '🇨🇳' },
-    { code: 'en', name: 'English', flag: '🇺🇸' }
+    { code: 'en', name: 'English', flag: '🇺🇸' },
   ];
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const currentLanguage =
+    languages.find(lang => lang.code === i18n.language) || languages[0];
 
   const handleLanguageChange = (langCode: string) => {
     i18n.changeLanguage(langCode);
@@ -32,7 +33,12 @@ const LanguageSwitcher = () => {
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
         </svg>
       </button>
 
@@ -44,7 +50,7 @@ const LanguageSwitcher = () => {
             exit={{ opacity: 0, y: -10 }}
             className="absolute top-full right-0 mt-2 w-32 bg-surface border border-surface rounded-lg shadow-lg z-50"
           >
-            {languages.map((language) => (
+            {languages.map(language => (
               <button
                 key={language.code}
                 onClick={() => handleLanguageChange(language.code)}

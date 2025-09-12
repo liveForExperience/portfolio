@@ -7,12 +7,16 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -20,7 +24,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -35,7 +39,11 @@ const Contact = () => {
 
   const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/chenyue', icon: 'github' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/chenyue', icon: 'linkedin' },
+    {
+      name: 'LinkedIn',
+      url: 'https://linkedin.com/in/chenyue',
+      icon: 'linkedin',
+    },
     { name: 'Twitter', url: 'https://twitter.com/chenyue', icon: 'twitter' },
     { name: 'Email', url: 'mailto:hello@chenyue.dev', icon: 'email' },
   ];
@@ -54,9 +62,12 @@ const Contact = () => {
             <motion.h1 variants={fadeUp} className="text-h1 font-bold mb-6">
               Get In Touch
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-muted max-w-2xl mx-auto">
-              Have a project in mind or want to collaborate? I'd love to hear from you.
-              Let's create something amazing together.
+            <motion.p
+              variants={fadeUp}
+              className="text-xl text-muted max-w-2xl mx-auto"
+            >
+              Have a project in mind or want to collaborate? I'd love to hear
+              from you. Let's create something amazing together.
             </motion.p>
           </motion.div>
         </div>
@@ -74,23 +85,31 @@ const Contact = () => {
               className="bg-surface p-8 rounded-lg border border-surface"
             >
               <h2 className="text-h3 font-bold mb-6">Send a Message</h2>
-              
+
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                  <p className="text-green-400">Thank you! Your message has been sent successfully.</p>
+                  <p className="text-green-400">
+                    Thank you! Your message has been sent successfully.
+                  </p>
                 </div>
               )}
-              
+
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
-                  <p className="text-red-400">Sorry, there was an error sending your message. Please try again.</p>
+                  <p className="text-red-400">
+                    Sorry, there was an error sending your message. Please try
+                    again.
+                  </p>
                 </div>
               )}
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Name *
                     </label>
                     <input
@@ -104,9 +123,12 @@ const Contact = () => {
                       placeholder="Your name"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Email *
                     </label>
                     <input
@@ -121,9 +143,12 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Subject *
                   </label>
                   <input
@@ -137,9 +162,12 @@ const Contact = () => {
                     placeholder="What's this about?"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -153,7 +181,7 @@ const Contact = () => {
                     placeholder="Tell me about your project or idea..."
                   />
                 </div>
-                
+
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
@@ -176,20 +204,22 @@ const Contact = () => {
               <div>
                 <h2 className="text-h3 font-bold mb-6">Let's Connect</h2>
                 <p className="text-muted leading-relaxed mb-8">
-                  I'm always interested in new opportunities, collaborations, and interesting projects. 
-                  Whether you have a specific project in mind or just want to chat about technology and design, 
-                  feel free to reach out.
+                  I'm always interested in new opportunities, collaborations,
+                  and interesting projects. Whether you have a specific project
+                  in mind or just want to chat about technology and design, feel
+                  free to reach out.
                 </p>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold mb-4">Response Time</h3>
                 <p className="text-muted">
-                  I typically respond to messages within 24 hours during weekdays. 
-                  For urgent matters, feel free to reach out via LinkedIn.
+                  I typically respond to messages within 24 hours during
+                  weekdays. For urgent matters, feel free to reach out via
+                  LinkedIn.
                 </p>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold mb-4">What I'm Looking For</h3>
                 <ul className="space-y-2 text-muted">
@@ -216,7 +246,7 @@ const Contact = () => {
           >
             Find Me Online
           </motion.h2>
-          
+
           <motion.div
             variants={stagger}
             initial="initial"
@@ -224,7 +254,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            {socialLinks.map((link) => (
+            {socialLinks.map(link => (
               <motion.a
                 key={link.name}
                 href={link.url}

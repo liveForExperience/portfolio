@@ -14,7 +14,7 @@ const Hero = ({ title, subtitle, cta }: HeroProps) => {
         >
           {title}
         </motion.h1>
-        
+
         <motion.p
           variants={fadeUp}
           initial="initial"
@@ -24,7 +24,7 @@ const Hero = ({ title, subtitle, cta }: HeroProps) => {
         >
           {subtitle}
         </motion.p>
-        
+
         <motion.div
           variants={fadeUp}
           initial="initial"

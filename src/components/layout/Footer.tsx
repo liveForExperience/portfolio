@@ -11,7 +11,7 @@ const Footer = ({ links }: FooterProps) => {
               © {new Date().getFullYear()} Chen Yue. All rights reserved.
             </p>
           </div>
-          
+
           <div className="flex space-x-6">
             {links.map((link, index) => (
               <motion.a

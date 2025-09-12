@@ -7,11 +7,11 @@ import en from './locales/en.json';
 
 const resources = {
   zh: {
-    translation: zh
+    translation: zh,
   },
   en: {
-    translation: en
-  }
+    translation: en,
+  },
 };
 
 i18n
@@ -21,15 +21,15 @@ i18n
     resources,
     lng: 'zh', // 默认语言设置为中文
     fallbackLng: 'en',
-    
+
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
     },
-    
+
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage']
-    }
+      caches: ['localStorage'],
+    },
   });
 
 export default i18n;

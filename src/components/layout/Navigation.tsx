@@ -25,12 +25,14 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-3">
             <HorseAvatar className="w-8 h-8" />
-            <span className="text-xl font-semibold text-accent">{t('name')}</span>
+            <span className="text-xl font-semibold text-accent">
+              {t('name')}
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <Link
                 key={item.path}
                 to={item.path}
@@ -90,7 +92,7 @@ const Navigation = () => {
             exit={{ opacity: 0, y: -10 }}
             className="md:hidden py-4 border-t border-surface"
           >
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <Link
                 key={item.path}
                 to={item.path}

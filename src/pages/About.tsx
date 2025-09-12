@@ -16,8 +16,12 @@ const About = () => {
             <motion.h1 variants={fadeUp} className="text-h1 font-bold mb-6">
               About Me
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-muted max-w-2xl mx-auto">
-              Frontend architect passionate about creating exceptional digital experiences
+            <motion.p
+              variants={fadeUp}
+              className="text-xl text-muted max-w-2xl mx-auto"
+            >
+              Frontend architect passionate about creating exceptional digital
+              experiences
             </motion.p>
           </motion.div>
 
@@ -33,17 +37,18 @@ const About = () => {
                 <span className="text-muted">Profile Image Placeholder</span>
               </div>
             </motion.div>
-            
+
             <motion.div variants={fadeUp} className="space-y-6">
               <p className="text-muted leading-relaxed">
-                I'm a frontend architect with over 8 years of experience building scalable, 
-                user-centric web applications. My expertise spans modern JavaScript frameworks, 
-                design systems, and performance optimization.
+                I'm a frontend architect with over 8 years of experience
+                building scalable, user-centric web applications. My expertise
+                spans modern JavaScript frameworks, design systems, and
+                performance optimization.
               </p>
               <p className="text-muted leading-relaxed">
-                I believe in the power of clean code, thoughtful design, and continuous learning. 
-                When I'm not coding, you'll find me reading about emerging technologies or 
-                watching football matches.
+                I believe in the power of clean code, thoughtful design, and
+                continuous learning. When I'm not coding, you'll find me reading
+                about emerging technologies or watching football matches.
               </p>
             </motion.div>
           </motion.div>
@@ -61,7 +66,7 @@ const About = () => {
           >
             Professional Journey
           </motion.h2>
-          
+
           <motion.div
             variants={stagger}
             initial="initial"
@@ -74,27 +79,31 @@ const About = () => {
                 year: '2024',
                 title: 'Senior Frontend Architect',
                 company: 'Tech Innovation Co.',
-                description: 'Leading frontend architecture decisions and mentoring development teams'
+                description:
+                  'Leading frontend architecture decisions and mentoring development teams',
               },
               {
                 year: '2022',
                 title: 'Frontend Team Lead',
                 company: 'Digital Solutions Inc.',
-                description: 'Built and scaled frontend teams while delivering high-impact products'
+                description:
+                  'Built and scaled frontend teams while delivering high-impact products',
               },
               {
                 year: '2020',
                 title: 'Senior Frontend Developer',
                 company: 'Creative Agency',
-                description: 'Developed award-winning web applications for Fortune 500 clients'
+                description:
+                  'Developed award-winning web applications for Fortune 500 clients',
               },
               {
                 year: '2018',
                 title: 'Frontend Developer',
                 company: 'Startup Ventures',
-                description: 'Full-stack development in fast-paced startup environment'
-              }
-            ].map((item) => (
+                description:
+                  'Full-stack development in fast-paced startup environment',
+              },
+            ].map(item => (
               <motion.div
                 key={item.year}
                 variants={fadeUp}
@@ -124,7 +133,8 @@ const About = () => {
           >
             <h2 className="text-h2 font-bold mb-6">Get My Resume</h2>
             <p className="text-muted mb-8 max-w-2xl mx-auto">
-              Download my complete CV to learn more about my experience, skills, and achievements.
+              Download my complete CV to learn more about my experience, skills,
+              and achievements.
             </p>
             <motion.button
               className="bg-accent text-background px-8 py-3 rounded-lg font-medium hover:bg-accent/90 transition-colors"

@@ -23,7 +23,7 @@ const setCachedData = <T>(key: string, data: T): void => {
 export const fetchProjects = async (): Promise<Project[]> => {
   const cacheKey = 'projects';
   const cached = getCachedData<Project[]>(cacheKey);
-  
+
   if (cached) {
     return cached;
   }
@@ -33,7 +33,7 @@ export const fetchProjects = async (): Promise<Project[]> => {
     if (!response.ok) {
       throw new Error(`Failed to fetch projects: ${response.statusText}`);
     }
-    
+
     const projects = await response.json();
     setCachedData(cacheKey, projects);
     return projects;
@@ -43,10 +43,12 @@ export const fetchProjects = async (): Promise<Project[]> => {
   }
 };
 
-export const fetchProjectBySlug = async (slug: string): Promise<Project | null> => {
+export const fetchProjectBySlug = async (
+  slug: string
+): Promise<Project | null> => {
   const cacheKey = `project-${slug}`;
   const cached = getCachedData<Project>(cacheKey);
-  
+
   if (cached) {
     return cached;
   }
@@ -59,7 +61,7 @@ export const fetchProjectBySlug = async (slug: string): Promise<Project | null> 
       }
       throw new Error(`Failed to fetch project: ${response.statusText}`);
     }
-    
+
     const project = await response.json();
     setCachedData(cacheKey, project);
     return project;
@@ -72,7 +74,7 @@ export const fetchProjectBySlug = async (slug: string): Promise<Project | null> 
 export const fetchVideos = async (): Promise<Video[]> => {
   const cacheKey = 'videos';
   const cached = getCachedData<Video[]>(cacheKey);
-  
+
   if (cached) {
     return cached;
   }
@@ -82,7 +84,7 @@ export const fetchVideos = async (): Promise<Video[]> => {
     if (!response.ok) {
       throw new Error(`Failed to fetch videos: ${response.statusText}`);
     }
-    
+
     const videos = await response.json();
     setCachedData(cacheKey, videos);
     return videos;
