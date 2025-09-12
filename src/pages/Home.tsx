@@ -472,14 +472,17 @@ const Home = () => {
               Ready to bring your ideas to life? Let's discuss how we can create
               something amazing together.
             </p>
-            <motion.a
-              href="/contact"
-              className="inline-block bg-accent text-background px-8 py-3 rounded-lg font-medium hover:bg-accent/90 transition-colors"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Start a Conversation
-            </motion.a>
+              <Link
+                to="/contact"
+                className="inline-block bg-accent text-background px-8 py-3 rounded-lg font-medium hover:bg-accent/90 transition-colors"
+              >
+                Start a Conversation
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>

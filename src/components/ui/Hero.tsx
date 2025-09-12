@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import type { HeroProps } from '../../types';
 import { fadeUp } from '../../lib/utils';
 
@@ -33,19 +34,22 @@ const Hero = ({ title, subtitle, cta }: HeroProps) => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           {cta.map((button, index) => (
-            <motion.a
+            <motion.div
               key={button.label}
-              href={button.url}
-              className={`px-8 py-3 rounded-lg font-medium transition-colors ${
-                index === 0
-                  ? 'bg-accent text-background hover:bg-accent/90'
-                  : 'border border-accent text-accent hover:bg-accent hover:text-background'
-              }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {button.label}
-            </motion.a>
+              <Link
+                to={button.url}
+                className={`inline-block px-8 py-3 rounded-lg font-medium transition-colors ${
+                  index === 0
+                    ? 'bg-accent text-background hover:bg-accent/90'
+                    : 'border border-accent text-accent hover:bg-accent hover:text-background'
+                }`}
+              >
+                {button.label}
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
       </div>
