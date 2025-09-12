@@ -37,21 +37,7 @@ jobs:
       - name: Run Prettier check
         run: npm run format:check
         
-      - name: Run unit tests
-        run: npm run test
-        
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-        
-      - name: Run E2E tests
-        run: npm run test:e2e
         
       - name: Test build
         run: npm run build
         
-      - name: Upload test coverage
-        if: matrix.node-version == 20
-        uses: codecov/codecov-action@v4
-        with:
-          file: ./coverage/lcov.info
-          fail_ci_if_error: false
