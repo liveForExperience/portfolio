@@ -1,0 +1,107 @@
+{
+  "name": "陈越",
+  "title": "积跬步，致千里",
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "projects": "项目",
+    "skills": "技能",
+    "interests": "兴趣",
+    "contact": "联系"
+  },
+  "hero": {
+    "title": "陈越",
+    "subtitle": "积跬步，致千里",
+    "cta": {
+      "viewProjects": "查看项目",
+      "getInTouch": "联系我"
+    }
+  },
+  "featuredWork": {
+    "title": "精选作品",
+    "subtitle": "展示我在现代Web开发方面专业技能的项目精选",
+    "projects": {
+      "ecommerce": {
+        "title": "电商平台",
+        "description": "使用TypeScript构建的全栈React应用，具有实时库存和支付处理功能"
+      },
+      "designSystem": {
+        "title": "设计系统",
+        "description": "包含Storybook文档和自动化测试的综合组件库"
+      },
+      "analytics": {
+        "title": "数据分析仪表板",
+        "description": "具有交互式图表和自定义报告的实时数据可视化平台"
+      }
+    },
+    "viewProject": "查看项目",
+    "viewAllProjects": "查看所有项目"
+  },
+  "stats": {
+    "projectsCompleted": "完成项目",
+    "yearsExperience": "年经验",
+    "technologiesMastered": "掌握技术",
+    "clientSatisfaction": "客户满意度"
+  },
+  "highlights": {
+    "featuredProjects": "精选项目",
+    "featuredProjectsDesc": "使用现代技术构建的创新解决方案",
+    "technicalExcellence": "技术卓越",
+    "technicalExcellenceDesc": "在React、TypeScript和现代Web标准方面的专家级熟练度",
+    "creativeVision": "创意愿景",
+    "creativeVisionDesc": "注重细节，连接设计与开发"
+  },
+  "skills": {
+    "title": "技术专长",
+    "subtitle": "现代Web开发和创意问题解决的专业技能",
+    "categories": {
+      "frontend": "前端开发",
+      "backend": "后端 & 数据库",
+      "design": "设计 & 用户体验",
+      "devops": "DevOps & 工具",
+      "performance": "性能优化",
+      "architecture": "系统架构"
+    },
+    "proficiency": "熟练度"
+  },
+  "about": {
+    "title": "关于陈越",
+    "description1": "拥有5年以上经验的热情前端架构师，专注于打造卓越的数字体验。我专门使用React、TypeScript和前沿设计系统等现代技术构建可扩展、高性能的Web应用程序。",
+    "description2": "我的方法将技术卓越与创意愿景相结合，确保每个项目不仅功能完美，还能提供出色的用户体验。我相信编写干净、可维护的代码，并始终站在Web开发趋势的前沿。",
+    "description3": "当我不在编程时，你会发现我在探索新技术、阅读设计原理或观看足球比赛。我总是渴望接受新挑战并在创新项目上合作。",
+    "learnMore": "了解更多关于我",
+    "currentFocus": "当前专注",
+    "recentAchievements": "近期成就",
+    "focusItems": [
+      "使用TypeScript构建可扩展的React应用程序",
+      "探索Web3和区块链技术",
+      "为开源项目做贡献",
+      "指导初级开发者"
+    ],
+    "achievementItems": [
+      "领导了3个主要产品发布的前端架构",
+      "通过优化将应用性能提升40%",
+      "构建了被50+开发者采用的设计系统",
+      "2024年在2个技术会议上发表演讲"
+    ]
+  },
+  "interests": {
+    "title": "代码之外",
+    "subtitle": "探索激发创造力和创新的兴趣",
+    "reading": {
+      "title": "阅读 & 学习",
+      "description": "精心策划的技术、设计和创新书籍收藏。始终学习，始终成长。",
+      "cta": "探索阅读清单"
+    },
+    "football": {
+      "title": "足球热情",
+      "description": "美丽游戏的精彩瞬间和时刻。足球教会团队合作和策略。",
+      "cta": "观看视频"
+    }
+  },
+  "contact": {
+    "title": "让我们一起工作",
+    "subtitle": "准备将您的想法变为现实？让我们讨论如何一起创造令人惊叹的作品。",
+    "cta": "开始对话"
+  }
+}

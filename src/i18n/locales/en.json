@@ -1,0 +1,107 @@
+{
+  "name": "Cade",
+  "title": "A journey of a thousand miles begins with a single step",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "interests": "Interests",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Cade",
+    "subtitle": "A journey of a thousand miles begins with a single step",
+    "cta": {
+      "viewProjects": "View Projects",
+      "getInTouch": "Get in Touch"
+    }
+  },
+  "featuredWork": {
+    "title": "Featured Work",
+    "subtitle": "A selection of projects that showcase my expertise in modern web development",
+    "projects": {
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "description": "Full-stack React application with TypeScript, featuring real-time inventory and payment processing"
+      },
+      "designSystem": {
+        "title": "Design System",
+        "description": "Comprehensive component library with Storybook documentation and automated testing"
+      },
+      "analytics": {
+        "title": "Analytics Dashboard",
+        "description": "Real-time data visualization platform with interactive charts and custom reporting"
+      }
+    },
+    "viewProject": "View Project",
+    "viewAllProjects": "View All Projects"
+  },
+  "stats": {
+    "projectsCompleted": "Projects Completed",
+    "yearsExperience": "Years Experience",
+    "technologiesMastered": "Technologies Mastered",
+    "clientSatisfaction": "Client Satisfaction"
+  },
+  "highlights": {
+    "featuredProjects": "Featured Projects",
+    "featuredProjectsDesc": "Innovative solutions built with modern technologies",
+    "technicalExcellence": "Technical Excellence",
+    "technicalExcellenceDesc": "Expert-level proficiency in React, TypeScript, and modern web standards",
+    "creativeVision": "Creative Vision",
+    "creativeVisionDesc": "Bridging design and development with attention to detail"
+  },
+  "skills": {
+    "title": "Technical Expertise",
+    "subtitle": "Specialized skills in modern web development and creative problem-solving",
+    "categories": {
+      "frontend": "Frontend Development",
+      "backend": "Backend & Database",
+      "design": "Design & UX",
+      "devops": "DevOps & Tools",
+      "performance": "Performance",
+      "architecture": "Architecture"
+    },
+    "proficiency": "Proficiency"
+  },
+  "about": {
+    "title": "About Cade",
+    "description1": "Passionate frontend architect with 5+ years of experience crafting exceptional digital experiences. I specialize in building scalable, performant web applications using modern technologies like React, TypeScript, and cutting-edge design systems.",
+    "description2": "My approach combines technical excellence with creative vision, ensuring every project not only functions flawlessly but also delivers an outstanding user experience. I believe in writing clean, maintainable code and staying at the forefront of web development trends.",
+    "description3": "When I'm not coding, you'll find me exploring new technologies, reading about design principles, or enjoying football matches. I'm always eager to take on new challenges and collaborate on innovative projects.",
+    "learnMore": "Learn More About Me",
+    "currentFocus": "Current Focus",
+    "recentAchievements": "Recent Achievements",
+    "focusItems": [
+      "Building scalable React applications with TypeScript",
+      "Exploring Web3 and blockchain technologies",
+      "Contributing to open-source projects",
+      "Mentoring junior developers"
+    ],
+    "achievementItems": [
+      "Led frontend architecture for 3 major product launches",
+      "Improved app performance by 40% through optimization",
+      "Built design system adopted by 50+ developers",
+      "Speaker at 2 tech conferences in 2024"
+    ]
+  },
+  "interests": {
+    "title": "Beyond Code",
+    "subtitle": "Exploring interests that fuel creativity and innovation",
+    "reading": {
+      "title": "Reading & Learning",
+      "description": "Curated collection of books on technology, design, and innovation. Always learning, always growing.",
+      "cta": "Explore Reading List"
+    },
+    "football": {
+      "title": "Football Passion",
+      "description": "Highlights and moments from the beautiful game. Football teaches teamwork and strategy.",
+      "cta": "Watch Videos"
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Ready to bring your ideas to life? Let's discuss how we can create something amazing together.",
+    "cta": "Start a Conversation"
+  }
+}
