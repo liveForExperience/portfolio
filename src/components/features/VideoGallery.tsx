@@ -6,7 +6,7 @@ import { fadeUp, stagger, formatDuration } from '../../lib/utils';
 const VideoGallery = ({ videos }: VideoGalleryProps) => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
-  const getEmbedUrl = (video: any) => {
+  const getEmbedUrl = (video: { source: string; url: string }) => {
     if (video.source === 'youtube') {
       const videoId = video.url.split('v=')[1]?.split('&')[0] || video.url.split('/').pop();
       return `https://www.youtube.com/embed/${videoId}`;

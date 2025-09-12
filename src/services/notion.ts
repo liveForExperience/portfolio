@@ -5,12 +5,12 @@ const API_BASE = '/api';
 
 // Cache configuration
 const CACHE_TTL = CACHE_CONFIG.TTL;
-const cache = new Map<string, { data: any; timestamp: number }>();
+const cache = new Map<string, { data: unknown; timestamp: number }>();
 
 const getCachedData = <T>(key: string): T | null => {
   const cached = cache.get(key);
   if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-    return cached.data;
+    return cached.data as T;
   }
   cache.delete(key);
   return null;
